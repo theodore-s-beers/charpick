@@ -54,6 +54,7 @@
           type="button"
           class="btn btn-outline-primary"
           data-toggle="tooltip"
+          data-trigger="manual"
           value="Ā"
           title=""
         >
@@ -741,6 +742,7 @@
     <script>
       $('[data-toggle="tooltip"]').tooltip();
       $(".btn").on("click", function() {
+        $('[data-toggle="tooltip"]').tooltip("hide");
         var myChar = $(this).val();
         var success = "Copied " + myChar;
         var failure = "Failed to copy " + myChar;
