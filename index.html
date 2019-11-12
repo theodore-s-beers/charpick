@@ -742,9 +742,28 @@
     ></script>
     <script>
       var thingy = document.getElementById("meepTest");
+      $('[data-toggle="tooltip"]').tooltip();
       $(".btn").on("click", function() {
-        var blah = $(this).val();
-        thingy.value += blah;
+        var myChar = $(this).val();
+        thingy.value += myChar;
+        var success = "Copied " + myChar;
+        var failure = "Failed to copy " + myChar;
+        var reset = "Click to copy " + myChar;
+        var reset = "";
+        navigator.clipboard
+          .writeText(myChar)
+          .then(() => {
+            $(this)
+              .attr("data-original-title", success)
+              .tooltip("show");
+            $(this).attr("data-original-title", reset);
+          })
+          .catch(() => {
+            $(this)
+              .attr("data-original-title", failure)
+              .tooltip("show");
+            $(this).attr("data-original-title", reset);
+          });
       });
     </script>
   </body>
