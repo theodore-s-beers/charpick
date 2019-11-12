@@ -1,0 +1,14 @@
+Vowels, uppercase:
+ĀÂ  ĒĪÎİŌÖŪÛÜ
+
+Vowels, lowercase:
+āâá ēīîıōöūûü
+
+Consonants, uppercase:
+ČÇḌḎĠḠǦĞḤḪḲ ṠṢŠŞṮṬẒŻẔ
+
+Consonants, lowercase:
+čçḍḏġḡǧğḥḫḳñṡṣšşṯṭẓżẕ
+
+Hamzah and ‘ayn:
+ʾʿ
