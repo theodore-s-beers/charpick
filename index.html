@@ -45,7 +45,7 @@
       <p>
         <em>Click a character to select it, then copy it to the clipboard.</em>
       </p>
-      <form action="JavaScript:copyChar();">
+      <form>
         <label for="charInput">Selected character:</label>
         <div class="form-row">
           <div class="col-auto" style="width:3.4rem">
@@ -61,7 +61,7 @@
           <div class="col-auto">
             <button
               id="copyButton"
-              type="submit"
+              type="button"
               class="btn btn-primary"
               style="width:auto;margin-left:.3rem"
               data-toggle="tooltip"
@@ -636,10 +636,6 @@
     ></script>
     <script>
       var charDisplay = document.getElementById("charInput");
-      $("#buttonsGalore").on("click", ".btn", function() {
-        var selectedChar = $(this).val();
-        charDisplay.value = selectedChar;
-      });
       function copyChar() {
         if (charDisplay.value.length > 0) {
           var success = "Copied: " + charDisplay.value;
@@ -655,6 +651,11 @@
           $("#copyButton").tooltip("disable");
         }
       }
+      $("#buttonsGalore").on("click", ".btn", function() {
+        var selectedChar = $(this).val();
+        charDisplay.value = selectedChar;
+      });
+      $("#copyButton").on("click", copyChar);
     </script>
   </body>
 </html>
