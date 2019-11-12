@@ -18,21 +18,21 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Gentium+Basic|Noto+Sans&display=swap"
+      href="https://fonts.googleapis.com/css?family=Gentium+Basic|Noto+Sans:400,400i&display=swap"
       rel="stylesheet"
     />
     <style>
       body {
         font-family: "Noto Sans", sans-serif;
       }
-      button {
+      #buttonsGalore button {
         margin-right: 0.6rem;
-        margin-bottom: 0.85rem;
+        margin-bottom: 0.9rem;
         width: 2.4rem;
         height: 2.4rem;
       }
-      #buttonHamzah,
-      #buttonAyn {
+      #buttonAyn,
+      #buttonHamzah {
         font-family: "Gentium Basic", serif;
         font-size: 130%;
       }
@@ -40,690 +40,583 @@
     <title>Character picker of last resort</title>
   </head>
   <body>
-    <div id="buttonsGalore" class="container" style="margin-top:1rem">
+    <div class="container" style="margin-top:.6rem">
       <h2>Character picker of last resort</h2>
       <p>
-        <em
-          >Click a character to copy it to the clipboard. Only one can be copied
-          at a time.</em
-        >
+        <em>Click a character to select it, then copy it to the clipboard.</em>
       </p>
-      <p>Vowels, uppercase:</p>
-      <p>
-        <button
-          id="buttonUA"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ā"
-          title=""
-        >
-          Ā
-        </button>
-        <button
-          id="buttonUCA"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Â"
-          title=""
-        >
-          Â
-        </button>
-        <button
-          id="buttonUE"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ē"
-          title=""
-        >
-          Ē
-        </button>
-        <button
-          id="buttonUI"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ī"
-          title=""
-        >
-          Ī
-        </button>
-        <button
-          id="buttonUCI"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Î"
-          title=""
-        >
-          Î
-        </button>
-        <button
-          id="buttonUTI"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="İ"
-          title=""
-        >
-          İ
-        </button>
-        <button
-          id="buttonUO"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ō"
-          title=""
-        >
-          Ō
-        </button>
-        <button
-          id="buttonUTO"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ö"
-          title=""
-        >
-          Ö
-        </button>
-        <button
-          id="buttonUU"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ū"
-          title=""
-        >
-          Ū
-        </button>
-        <button
-          id="buttonUCU"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Û"
-          title=""
-        >
-          Û
-        </button>
-        <button
-          id="buttonUTU"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ü"
-          title=""
-        >
-          Ü
-        </button>
-      </p>
-      <p style="margin-top:-.6rem">Vowels, lowercase:</p>
-      <p>
-        <button
-          id="buttonLA"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ā"
-          title=""
-        >
-          ā
-        </button>
-        <button
-          id="buttonLCA"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="â"
-          title=""
-        >
-          â
-        </button>
-        <button
-          id="buttonLAA"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="á"
-          title=""
-        >
-          á
-        </button>
-        <button
-          id="buttonLE"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ē"
-          title=""
-        >
-          ē
-        </button>
-        <button
-          id="buttonLI"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ī"
-          title=""
-        >
-          ī
-        </button>
-        <button
-          id="buttonLCI"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="î"
-          title=""
-        >
-          î
-        </button>
-        <button
-          id="buttonLTI"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ı"
-          title=""
-        >
-          ı
-        </button>
-        <button
-          id="buttonLO"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ō"
-          title=""
-        >
-          ō
-        </button>
-        <button
-          id="buttonLTO"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ö"
-          title=""
-        >
-          ö
-        </button>
-        <button
-          id="buttonLU"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ū"
-          title=""
-        >
-          ū
-        </button>
-        <button
-          id="buttonLCU"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="û"
-          title=""
-        >
-          û
-        </button>
-        <button
-          id="buttonLTU"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ü"
-          title=""
-        >
-          ü
-        </button>
-      </p>
-      <p style="margin-top:-.6rem">Consonants, uppercase:</p>
-      <p>
-        <button
-          id="buttonUCC"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Č"
-          title=""
-        >
-          Č
-        </button>
-        <button
-          id="buttonUTC"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ç"
-          title=""
-        >
-          Ç
-        </button>
-        <button
-          id="buttonUD"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ḍ"
-          title=""
-        >
-          Ḍ
-        </button>
-        <button
-          id="buttonULD"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ḏ"
-          title=""
-        >
-          Ḏ
-        </button>
-        <button
-          id="buttonUDG"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ġ"
-          title=""
-        >
-          Ġ
-        </button>
-        <button
-          id="buttonULG"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ḡ"
-          title=""
-        >
-          Ḡ
-        </button>
-        <button
-          id="buttonUCG"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ǧ"
-          title=""
-        >
-          Ǧ
-        </button>
-        <button
-          id="buttonUTG"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ğ"
-          title=""
-        >
-          Ğ
-        </button>
-        <button
-          id="buttonUH"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ḥ"
-          title=""
-        >
-          Ḥ
-        </button>
-        <button
-          id="buttonUBH"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ḫ"
-          title=""
-        >
-          Ḫ
-        </button>
-        <button
-          id="buttonUK"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ḳ"
-          title=""
-        >
-          Ḳ
-        </button>
-        <button
-          id="buttonUDS"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ṡ"
-          title=""
-        >
-          Ṡ
-        </button>
-        <button
-          id="buttonUS"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ṣ"
-          title=""
-        >
-          Ṣ
-        </button>
-        <button
-          id="buttonUCS"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Š"
-          title=""
-        >
-          Š
-        </button>
-        <button
-          id="buttonUTS"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ş"
-          title=""
-        >
-          Ş
-        </button>
-        <button
-          id="buttonULT"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ṯ"
-          title=""
-        >
-          Ṯ
-        </button>
-        <button
-          id="buttonUT"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ṭ"
-          title=""
-        >
-          Ṭ
-        </button>
-        <button
-          id="buttonUZ"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ẓ"
-          title=""
-        >
-          Ẓ
-        </button>
-        <button
-          id="buttonUDZ"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ż"
-          title=""
-        >
-          Ż
-        </button>
-        <button
-          id="buttonULZ"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="Ẕ"
-          title=""
-        >
-          Ẕ
-        </button>
-      </p>
-      <p style="margin-top:-.6rem">Consonants, lowercase:</p>
-      <p>
-        <button
-          id="buttonLCC"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="č"
-          title=""
-        >
-          č
-        </button>
-        <button
-          id="buttonLTC"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ç"
-          title=""
-        >
-          ç
-        </button>
-        <button
-          id="buttonLD"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ḍ"
-          title=""
-        >
-          ḍ
-        </button>
-        <button
-          id="buttonLLD"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ḏ"
-          title=""
-        >
-          ḏ
-        </button>
-        <button
-          id="buttonLDG"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ġ"
-          title=""
-        >
-          ġ
-        </button>
-        <button
-          id="buttonLLG"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ḡ"
-          title=""
-        >
-          ḡ
-        </button>
-        <button
-          id="buttonLCG"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ǧ"
-          title=""
-        >
-          ǧ
-        </button>
-        <button
-          id="buttonLTG"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ğ"
-          title=""
-        >
-          ğ
-        </button>
-        <button
-          id="buttonLH"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ḥ"
-          title=""
-        >
-          ḥ
-        </button>
-        <button
-          id="buttonLBH"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ḫ"
-          title=""
-        >
-          ḫ
-        </button>
-        <button
-          id="buttonLK"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ḳ"
-          title=""
-        >
-          ḳ
-        </button>
-        <button
-          id="buttonLN"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ñ"
-          title=""
-        >
-          ñ
-        </button>
-        <button
-          id="buttonLDS"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ṡ"
-          title=""
-        >
-          ṡ
-        </button>
-        <button
-          id="buttonLS"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ṣ"
-          title=""
-        >
-          ṣ
-        </button>
-        <button
-          id="buttonLCS"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="š"
-          title=""
-        >
-          š
-        </button>
-        <button
-          id="buttonLTS"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ş"
-          title=""
-        >
-          ş
-        </button>
-        <button
-          id="buttonLLT"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ṯ"
-          title=""
-        >
-          ṯ
-        </button>
-        <button
-          id="buttonLT"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ṭ"
-          title=""
-        >
-          ṭ
-        </button>
-        <button
-          id="buttonLZ"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ẓ"
-          title=""
-        >
-          ẓ
-        </button>
-        <button
-          id="buttonLDZ"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ż"
-          title=""
-        >
-          ż
-        </button>
-        <button
-          id="buttonLLZ"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ẕ"
-          title=""
-        >
-          ẕ
-        </button>
-      </p>
-      <p style="margin-top:-.6rem"><em>Hamzah</em> and <em>‘ayn</em>:</p>
-      <p>
-        <button
-          id="buttonHamzah"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ʾ"
-          title=""
-        >
-          ʾ
-        </button>
-        <button
-          id="buttonAyn"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="tooltip"
-          value="ʿ"
-          title=""
-        >
-          ʿ
-        </button>
-      </p>
-      <input type="text" id="meepTest" value="" />
+      <form action="JavaScript:copyChar();">
+        <label>Selected character:</label>
+        <div class="form-row">
+          <div class="col-auto" style="width:3.4rem">
+            <input
+              readonly="readonly"
+              type="text"
+              class="form-control"
+              id="charInput"
+              style="text-align:center"
+            />
+          </div>
+          <div class="col-auto">
+            <button
+              id="copyButton"
+              type="submit"
+              class="btn btn-primary"
+              style="width:auto;margin-left:.3rem"
+              data-toggle="tooltip"
+              data-delay='{"hide":"1000"}'
+              title=""
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </form>
+      <div id="buttonsGalore">
+        <p style="margin-top:1rem">Vowels, uppercase</p>
+        <p>
+          <button
+            id="buttonUA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ā"
+          >
+            Ā
+          </button>
+          <button
+            id="buttonUCA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Â"
+          >
+            Â
+          </button>
+          <button
+            id="buttonUE"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ē"
+          >
+            Ē
+          </button>
+          <button
+            id="buttonUI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ī"
+          >
+            Ī
+          </button>
+          <button
+            id="buttonUCI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Î"
+          >
+            Î
+          </button>
+          <button
+            id="buttonUTI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="İ"
+          >
+            İ
+          </button>
+          <button
+            id="buttonUO"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ō"
+          >
+            Ō
+          </button>
+          <button
+            id="buttonUTO"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ö"
+          >
+            Ö
+          </button>
+          <button
+            id="buttonUU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ū"
+          >
+            Ū
+          </button>
+          <button
+            id="buttonUCU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Û"
+          >
+            Û
+          </button>
+          <button
+            id="buttonUTU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ü"
+          >
+            Ü
+          </button>
+        </p>
+        <p style="margin-top:-.8rem">Vowels, lowercase</p>
+        <p>
+          <button
+            id="buttonLA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ā"
+          >
+            ā
+          </button>
+          <button
+            id="buttonLCA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="â"
+          >
+            â
+          </button>
+          <button
+            id="buttonLAA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="á"
+          >
+            á
+          </button>
+          <button
+            id="buttonLE"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ē"
+          >
+            ē
+          </button>
+          <button
+            id="buttonLI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ī"
+          >
+            ī
+          </button>
+          <button
+            id="buttonLCI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="î"
+          >
+            î
+          </button>
+          <button
+            id="buttonLTI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ı"
+          >
+            ı
+          </button>
+          <button
+            id="buttonLO"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ō"
+          >
+            ō
+          </button>
+          <button
+            id="buttonLTO"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ö"
+          >
+            ö
+          </button>
+          <button
+            id="buttonLU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ū"
+          >
+            ū
+          </button>
+          <button
+            id="buttonLCU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="û"
+          >
+            û
+          </button>
+          <button
+            id="buttonLTU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ü"
+          >
+            ü
+          </button>
+        </p>
+        <p style="margin-top:-.8rem">Consonants, uppercase</p>
+        <p>
+          <button
+            id="buttonUCC"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Č"
+          >
+            Č
+          </button>
+          <button
+            id="buttonUTC"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ç"
+          >
+            Ç
+          </button>
+          <button
+            id="buttonUD"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḍ"
+          >
+            Ḍ
+          </button>
+          <button
+            id="buttonULD"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḏ"
+          >
+            Ḏ
+          </button>
+          <button
+            id="buttonUDG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ġ"
+          >
+            Ġ
+          </button>
+          <button
+            id="buttonULG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḡ"
+          >
+            Ḡ
+          </button>
+          <button
+            id="buttonUCG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ǧ"
+          >
+            Ǧ
+          </button>
+          <button
+            id="buttonUTG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ğ"
+          >
+            Ğ
+          </button>
+          <button
+            id="buttonUH"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḥ"
+          >
+            Ḥ
+          </button>
+          <button
+            id="buttonUBH"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḫ"
+          >
+            Ḫ
+          </button>
+          <button
+            id="buttonUK"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḳ"
+          >
+            Ḳ
+          </button>
+          <button
+            id="buttonUDS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ṡ"
+          >
+            Ṡ
+          </button>
+          <button
+            id="buttonUS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ṣ"
+          >
+            Ṣ
+          </button>
+          <button
+            id="buttonUCS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Š"
+          >
+            Š
+          </button>
+          <button
+            id="buttonUTS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ş"
+          >
+            Ş
+          </button>
+          <button
+            id="buttonULT"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ṯ"
+          >
+            Ṯ
+          </button>
+          <button
+            id="buttonUT"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ṭ"
+          >
+            Ṭ
+          </button>
+          <button
+            id="buttonUZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ẓ"
+          >
+            Ẓ
+          </button>
+          <button
+            id="buttonUDZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ż"
+          >
+            Ż
+          </button>
+          <button
+            id="buttonULZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ẕ"
+          >
+            Ẕ
+          </button>
+        </p>
+        <p style="margin-top:-.8rem">Consonants, lowercase</p>
+        <p>
+          <button
+            id="buttonLCC"
+            type="button"
+            class="btn btn-outline-primary"
+            value="č"
+          >
+            č
+          </button>
+          <button
+            id="buttonLTC"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ç"
+          >
+            ç
+          </button>
+          <button
+            id="buttonLD"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḍ"
+          >
+            ḍ
+          </button>
+          <button
+            id="buttonLLD"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḏ"
+          >
+            ḏ
+          </button>
+          <button
+            id="buttonLDG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ġ"
+          >
+            ġ
+          </button>
+          <button
+            id="buttonLLG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḡ"
+          >
+            ḡ
+          </button>
+          <button
+            id="buttonLCG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ǧ"
+          >
+            ǧ
+          </button>
+          <button
+            id="buttonLTG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ğ"
+          >
+            ğ
+          </button>
+          <button
+            id="buttonLH"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḥ"
+          >
+            ḥ
+          </button>
+          <button
+            id="buttonLBH"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḫ"
+          >
+            ḫ
+          </button>
+          <button
+            id="buttonLK"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḳ"
+          >
+            ḳ
+          </button>
+          <button
+            id="buttonLN"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ñ"
+          >
+            ñ
+          </button>
+          <button
+            id="buttonLDS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ṡ"
+          >
+            ṡ
+          </button>
+          <button
+            id="buttonLS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ṣ"
+          >
+            ṣ
+          </button>
+          <button
+            id="buttonLCS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="š"
+          >
+            š
+          </button>
+          <button
+            id="buttonLTS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ş"
+          >
+            ş
+          </button>
+          <button
+            id="buttonLLT"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ṯ"
+          >
+            ṯ
+          </button>
+          <button
+            id="buttonLT"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ṭ"
+          >
+            ṭ
+          </button>
+          <button
+            id="buttonLZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ẓ"
+          >
+            ẓ
+          </button>
+          <button
+            id="buttonLDZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ż"
+          >
+            ż
+          </button>
+          <button
+            id="buttonLLZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ẕ"
+          >
+            ẕ
+          </button>
+        </p>
+        <p style="margin-top:-.8rem"><em>Hamzah</em> and <em>‘ayn</em></p>
+        <p>
+          <button
+            id="buttonHamzah"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ʾ"
+          >
+            ʾ
+          </button>
+          <button
+            id="buttonAyn"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ʿ"
+          >
+            ʿ
+          </button>
+        </p>
+      </div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -741,30 +634,26 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var thingy = document.getElementById("meepTest");
-      $('[data-toggle="tooltip"]').tooltip();
-      $(".btn").on("click", function() {
-        var myChar = $(this).val();
-        thingy.value += myChar;
-        var success = "Copied " + myChar;
-        var failure = "Failed to copy " + myChar;
-        var reset = "Click to copy " + myChar;
-        var reset = "";
-        navigator.clipboard
-          .writeText(myChar)
-          .then(() => {
-            $(this)
-              .attr("data-original-title", success)
-              .tooltip("show");
-            $(this).attr("data-original-title", reset);
-          })
-          .catch(() => {
-            $(this)
-              .attr("data-original-title", failure)
-              .tooltip("show");
-            $(this).attr("data-original-title", reset);
-          });
+      var charDisplay = document.getElementById("charInput");
+      $("#buttonsGalore").on("click", ".btn", function() {
+        var selectedChar = $(this).val();
+        charDisplay.value = selectedChar;
       });
+      function copyChar() {
+        if (charDisplay.value.length > 0) {
+          var success = "Copied: " + charDisplay.value;
+          charDisplay.select();
+          charDisplay.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+          document.getSelection().removeAllRanges();
+          document.getElementById("charInput").blur();
+          $("#copyButton").tooltip("enable");
+          $("#copyButton")
+            .attr("data-original-title", success)
+            .tooltip("show");
+          $("#copyButton").tooltip("disable");
+        }
+      }
     </script>
   </body>
 </html>
