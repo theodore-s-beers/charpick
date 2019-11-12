@@ -1,8 +1,8 @@
 Vowels, uppercase:
-ĀÂ  ĒĪÎİŌÖŪÛÜ
+ĀÂ ĒĪÎİŌÖŪÛÜ
 
 Vowels, lowercase:
-āâá ēīîıōöūûü
+āâáēīîıōöūûü
 
 Consonants, uppercase:
 ČÇḌḎĠḠǦĞḤḪḲ ṠṢŠŞṮṬẒŻẔ
