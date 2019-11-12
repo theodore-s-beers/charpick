@@ -740,7 +740,7 @@
     ></script>
     <script>
       $('[data-toggle="tooltip"]').tooltip();
-      $("#buttonsGalore").on("click", ".btn", function(e) {
+      $("#buttonsGalore").on("click touchstart", ".btn", function(e) {
         var myChar = $(this).val();
         var success = "Copied " + myChar;
         var failure = "Failed to copy " + myChar;
