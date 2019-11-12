@@ -723,6 +723,7 @@
           ʿ
         </button>
       </p>
+      <input type="text" id="meepTest" value="" />
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -740,8 +741,10 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      var thingy = document.getElementById("meepTest");
       $(".btn").on("click", function() {
-        alert("Bah");
+        var blah = $(this).val();
+        thingy.value += blah;
       });
     </script>
   </body>
