@@ -635,10 +635,10 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var charDisplay = document.getElementById("charInput");
+      const charDisplay = document.getElementById("charInput");
       function copyChar() {
         if (charDisplay.value.length > 0) {
-          var success = "Copied: " + charDisplay.value;
+          const success = "Copied: " + charDisplay.value;
           charDisplay.select();
           charDisplay.setSelectionRange(0, 99999);
           document.execCommand("copy");
@@ -652,7 +652,7 @@
         }
       }
       $("#buttonsGalore").on("click", ".btn", function() {
-        var selectedChar = $(this).val();
+        const selectedChar = $(this).val();
         charDisplay.value = selectedChar;
       });
       $("#copyButton").on("click", copyChar);

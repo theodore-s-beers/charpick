@@ -807,11 +807,11 @@
     ></script>
     <script>
       $('[data-toggle="tooltip"]').tooltip();
-      $("#buttonsGalore").on("click", ".btn", function(e) {
-        var myChar = $(this).val();
-        var success = "Copied " + myChar;
-        var failure = "Failed to copy " + myChar;
-        var reset = "";
+      $("button").on("click", function() {
+        const myChar = $(this).val();
+        const success = "Copied " + myChar;
+        const failure = "Failed to copy " + myChar;
+        const reset = "";
         navigator.clipboard
           .writeText(myChar)
           .then(() => {
