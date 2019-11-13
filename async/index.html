@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Copy special characters for romanization of Arabic-script languages."
+    />
+    <link rel="icon" href="#" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Gentium+Basic|Noto+Sans:400,400i&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Noto Sans", sans-serif;
+      }
+      button {
+        margin-right: 0.6rem;
+        margin-bottom: 0.9rem;
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+      #buttonAyn,
+      #buttonHamzah {
+        font-family: "Gentium Basic", serif;
+        font-size: 140%;
+      }
+    </style>
+    <title>Character picker of last resort</title>
+  </head>
+  <body>
+    <div id="buttonsGalore" class="container" style="margin-top:1rem">
+      <h2>Character picker of last resort</h2>
+      <p>
+        <em
+          >Click a character to copy it to the clipboard. Only one can be copied
+          at a time.</em
+        >
+      </p>
+      <p>Vowels, uppercase</p>
+      <p>
+        <button
+          id="buttonUA"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ā"
+          title=""
+        >
+          Ā
+        </button>
+        <button
+          id="buttonUCA"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Â"
+          title=""
+        >
+          Â
+        </button>
+        <button
+          id="buttonUE"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ē"
+          title=""
+        >
+          Ē
+        </button>
+        <button
+          id="buttonUI"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ī"
+          title=""
+        >
+          Ī
+        </button>
+        <button
+          id="buttonUCI"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Î"
+          title=""
+        >
+          Î
+        </button>
+        <button
+          id="buttonUTI"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="İ"
+          title=""
+        >
+          İ
+        </button>
+        <button
+          id="buttonUO"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ō"
+          title=""
+        >
+          Ō
+        </button>
+        <button
+          id="buttonUTO"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ö"
+          title=""
+        >
+          Ö
+        </button>
+        <button
+          id="buttonUU"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ū"
+          title=""
+        >
+          Ū
+        </button>
+        <button
+          id="buttonUCU"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Û"
+          title=""
+        >
+          Û
+        </button>
+        <button
+          id="buttonUTU"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ü"
+          title=""
+        >
+          Ü
+        </button>
+      </p>
+      <p style="margin-top:-.8rem">Vowels, lowercase</p>
+      <p>
+        <button
+          id="buttonLA"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ā"
+          title=""
+        >
+          ā
+        </button>
+        <button
+          id="buttonLCA"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="â"
+          title=""
+        >
+          â
+        </button>
+        <button
+          id="buttonLAA"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="á"
+          title=""
+        >
+          á
+        </button>
+        <button
+          id="buttonLE"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ē"
+          title=""
+        >
+          ē
+        </button>
+        <button
+          id="buttonLI"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ī"
+          title=""
+        >
+          ī
+        </button>
+        <button
+          id="buttonLCI"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="î"
+          title=""
+        >
+          î
+        </button>
+        <button
+          id="buttonLTI"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ı"
+          title=""
+        >
+          ı
+        </button>
+        <button
+          id="buttonLO"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ō"
+          title=""
+        >
+          ō
+        </button>
+        <button
+          id="buttonLTO"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ö"
+          title=""
+        >
+          ö
+        </button>
+        <button
+          id="buttonLU"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ū"
+          title=""
+        >
+          ū
+        </button>
+        <button
+          id="buttonLCU"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="û"
+          title=""
+        >
+          û
+        </button>
+        <button
+          id="buttonLTU"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ü"
+          title=""
+        >
+          ü
+        </button>
+      </p>
+      <p style="margin-top:-.8rem">Consonants, uppercase</p>
+      <p>
+        <button
+          id="buttonUCC"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Č"
+          title=""
+        >
+          Č
+        </button>
+        <button
+          id="buttonUTC"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ç"
+          title=""
+        >
+          Ç
+        </button>
+        <button
+          id="buttonUD"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ḍ"
+          title=""
+        >
+          Ḍ
+        </button>
+        <button
+          id="buttonULD"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ḏ"
+          title=""
+        >
+          Ḏ
+        </button>
+        <button
+          id="buttonUDG"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ġ"
+          title=""
+        >
+          Ġ
+        </button>
+        <button
+          id="buttonULG"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ḡ"
+          title=""
+        >
+          Ḡ
+        </button>
+        <button
+          id="buttonUCG"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ǧ"
+          title=""
+        >
+          Ǧ
+        </button>
+        <button
+          id="buttonUTG"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ğ"
+          title=""
+        >
+          Ğ
+        </button>
+        <button
+          id="buttonUH"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ḥ"
+          title=""
+        >
+          Ḥ
+        </button>
+        <button
+          id="buttonUBH"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ḫ"
+          title=""
+        >
+          Ḫ
+        </button>
+        <button
+          id="buttonUK"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ḳ"
+          title=""
+        >
+          Ḳ
+        </button>
+        <button
+          id="buttonUDS"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ṡ"
+          title=""
+        >
+          Ṡ
+        </button>
+        <button
+          id="buttonUS"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ṣ"
+          title=""
+        >
+          Ṣ
+        </button>
+        <button
+          id="buttonUCS"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Š"
+          title=""
+        >
+          Š
+        </button>
+        <button
+          id="buttonUTS"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ş"
+          title=""
+        >
+          Ş
+        </button>
+        <button
+          id="buttonULT"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ṯ"
+          title=""
+        >
+          Ṯ
+        </button>
+        <button
+          id="buttonUT"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ṭ"
+          title=""
+        >
+          Ṭ
+        </button>
+        <button
+          id="buttonUZ"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ẓ"
+          title=""
+        >
+          Ẓ
+        </button>
+        <button
+          id="buttonUDZ"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ż"
+          title=""
+        >
+          Ż
+        </button>
+        <button
+          id="buttonULZ"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="Ẕ"
+          title=""
+        >
+          Ẕ
+        </button>
+      </p>
+      <p style="margin-top:-.8rem">Consonants, lowercase</p>
+      <p>
+        <button
+          id="buttonLCC"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="č"
+          title=""
+        >
+          č
+        </button>
+        <button
+          id="buttonLTC"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ç"
+          title=""
+        >
+          ç
+        </button>
+        <button
+          id="buttonLD"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ḍ"
+          title=""
+        >
+          ḍ
+        </button>
+        <button
+          id="buttonLLD"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ḏ"
+          title=""
+        >
+          ḏ
+        </button>
+        <button
+          id="buttonLDG"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ġ"
+          title=""
+        >
+          ġ
+        </button>
+        <button
+          id="buttonLLG"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ḡ"
+          title=""
+        >
+          ḡ
+        </button>
+        <button
+          id="buttonLCG"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ǧ"
+          title=""
+        >
+          ǧ
+        </button>
+        <button
+          id="buttonLTG"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ğ"
+          title=""
+        >
+          ğ
+        </button>
+        <button
+          id="buttonLH"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ḥ"
+          title=""
+        >
+          ḥ
+        </button>
+        <button
+          id="buttonLBH"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ḫ"
+          title=""
+        >
+          ḫ
+        </button>
+        <button
+          id="buttonLK"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ḳ"
+          title=""
+        >
+          ḳ
+        </button>
+        <button
+          id="buttonLN"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ñ"
+          title=""
+        >
+          ñ
+        </button>
+        <button
+          id="buttonLDS"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ṡ"
+          title=""
+        >
+          ṡ
+        </button>
+        <button
+          id="buttonLS"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ṣ"
+          title=""
+        >
+          ṣ
+        </button>
+        <button
+          id="buttonLCS"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="š"
+          title=""
+        >
+          š
+        </button>
+        <button
+          id="buttonLTS"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ş"
+          title=""
+        >
+          ş
+        </button>
+        <button
+          id="buttonLLT"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ṯ"
+          title=""
+        >
+          ṯ
+        </button>
+        <button
+          id="buttonLT"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ṭ"
+          title=""
+        >
+          ṭ
+        </button>
+        <button
+          id="buttonLZ"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ẓ"
+          title=""
+        >
+          ẓ
+        </button>
+        <button
+          id="buttonLDZ"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ż"
+          title=""
+        >
+          ż
+        </button>
+        <button
+          id="buttonLLZ"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ẕ"
+          title=""
+        >
+          ẕ
+        </button>
+      </p>
+      <p style="margin-top:-.8rem"><em>Hamzah</em> and <em>‘ayn</em></p>
+      <p>
+        <button
+          id="buttonHamzah"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ʾ"
+          title=""
+        >
+          ʾ
+        </button>
+        <button
+          id="buttonAyn"
+          type="button"
+          class="btn btn-outline-primary"
+          data-toggle="tooltip"
+          data-delay='{"hide":"1000"}'
+          value="ʿ"
+          title=""
+        >
+          ʿ
+        </button>
+      </p>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $('[data-toggle="tooltip"]').tooltip();
+      $("#buttonsGalore").on("click", ".btn", function(e) {
+        var myChar = $(this).val();
+        var success = "Copied " + myChar;
+        var failure = "Failed to copy " + myChar;
+        var reset = "";
+        navigator.clipboard
+          .writeText(myChar)
+          .then(() => {
+            $(this)
+              .attr("data-original-title", success)
+              .tooltip("show");
+            $(this).blur();
+            $(this).attr("data-original-title", reset);
+          })
+          .catch(() => {
+            $(this)
+              .attr("data-original-title", failure)
+              .tooltip("show");
+            $(this).blur();
+            $(this).attr("data-original-title", reset);
+          });
+      });
+    </script>
+  </body>
+</html>
