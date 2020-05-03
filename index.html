@@ -48,7 +48,7 @@
     <title>Character picker of last resort</title>
   </head>
   <body>
-    <div class="container" style="margin-top:1rem">
+    <div class="container" style="margin-top: 1rem;">
       <h2>Character picker of last resort</h2>
       <p>
         <em
@@ -60,14 +60,14 @@
       <form>
         <label for="charInput">Selected character:</label>
         <div class="form-row">
-          <div class="col-auto" style="width:3.4rem">
+          <div class="col-auto" style="width: 3.4rem;">
             <input
               readonly="readonly"
               autocomplete="off"
               type="text"
               class="form-control"
               id="charInput"
-              style="text-align:center"
+              style="text-align: center;"
             />
           </div>
           <div class="col-auto">
@@ -75,7 +75,7 @@
               id="copyButton"
               type="button"
               class="btn btn-primary"
-              style="width:auto;margin-left:.3rem"
+              style="width: auto; margin-left: 0.3rem;"
               data-toggle="tooltip"
               data-delay='{"hide":"1000"}'
               title=""
@@ -657,13 +657,11 @@
           document.getSelection().removeAllRanges();
           document.getElementById("charInput").blur();
           $("#copyButton").tooltip("enable");
-          $("#copyButton")
-            .attr("data-original-title", success)
-            .tooltip("show");
+          $("#copyButton").attr("data-original-title", success).tooltip("show");
           $("#copyButton").tooltip("disable");
         }
       }
-      $("#buttonsGalore").on("click", ".btn", function() {
+      $("#buttonsGalore").on("click", ".btn", function () {
         const selectedChar = $(this).val();
         charDisplay.value = selectedChar;
       });
