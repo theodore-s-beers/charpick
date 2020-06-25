@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Copy special characters for romanization of Arabic-script languages."
+    />
+    <link rel="icon" href="#" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Gentium+Basic|Noto+Sans:400,400i&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Noto Sans", sans-serif;
+      }
+      .firstRow {
+        margin-top: 1.3rem;
+        margin-bottom: 0.6rem;
+      }
+      .subsequentRow {
+        margin-top: -0.8rem;
+        margin-bottom: 0.6rem;
+      }
+      #buttonsGalore button {
+        margin-right: 0.6rem;
+        margin-bottom: 0.9rem;
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+      #buttonAyn,
+      #buttonHamzah {
+        font-family: "Gentium Basic", serif;
+        font-size: 140%;
+      }
+    </style>
+    <title>Character picker of last resort</title>
+  </head>
+  <body>
+    <div class="container" style="margin-top: 1rem;">
+      <h2>Character picker of last resort</h2>
+      <p>
+        <em
+          >Click a character to select it, then copy it to the clipboard.<br />(There
+          is a more <a href="../">streamlined version</a>, which should work in
+          most modern browsers.)</em
+        >
+      </p>
+      <form>
+        <label for="charInput">Selected character:</label>
+        <div class="form-row">
+          <div class="col-auto" style="width: 3.4rem;">
+            <input
+              readonly="readonly"
+              autocomplete="off"
+              type="text"
+              class="form-control"
+              id="charInput"
+              style="text-align: center;"
+            />
+          </div>
+          <div class="col-auto">
+            <button
+              id="copyButton"
+              type="button"
+              class="btn btn-primary"
+              style="width: auto; margin-left: 0.3rem;"
+              data-toggle="tooltip"
+              data-delay='{"hide":"1000"}'
+              title=""
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </form>
+      <div id="buttonsGalore">
+        <p class="firstRow">Vowels, uppercase</p>
+        <p>
+          <button
+            id="buttonUA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ā"
+          >
+            Ā
+          </button>
+          <button
+            id="buttonUCA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Â"
+          >
+            Â
+          </button>
+          <button
+            id="buttonUE"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ē"
+          >
+            Ē
+          </button>
+          <button
+            id="buttonUI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ī"
+          >
+            Ī
+          </button>
+          <button
+            id="buttonUCI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Î"
+          >
+            Î
+          </button>
+          <button
+            id="buttonUTI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="İ"
+          >
+            İ
+          </button>
+          <button
+            id="buttonUO"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ō"
+          >
+            Ō
+          </button>
+          <button
+            id="buttonUTO"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ö"
+          >
+            Ö
+          </button>
+          <button
+            id="buttonUU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ū"
+          >
+            Ū
+          </button>
+          <button
+            id="buttonUCU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Û"
+          >
+            Û
+          </button>
+          <button
+            id="buttonUTU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ü"
+          >
+            Ü
+          </button>
+        </p>
+        <p class="subsequentRow">Vowels, lowercase</p>
+        <p>
+          <button
+            id="buttonLA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ā"
+          >
+            ā
+          </button>
+          <button
+            id="buttonLCA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="â"
+          >
+            â
+          </button>
+          <button
+            id="buttonLAA"
+            type="button"
+            class="btn btn-outline-primary"
+            value="á"
+          >
+            á
+          </button>
+          <button
+            id="buttonLE"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ē"
+          >
+            ē
+          </button>
+          <button
+            id="buttonLI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ī"
+          >
+            ī
+          </button>
+          <button
+            id="buttonLCI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="î"
+          >
+            î
+          </button>
+          <button
+            id="buttonLTI"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ı"
+          >
+            ı
+          </button>
+          <button
+            id="buttonLO"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ō"
+          >
+            ō
+          </button>
+          <button
+            id="buttonLTO"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ö"
+          >
+            ö
+          </button>
+          <button
+            id="buttonLU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ū"
+          >
+            ū
+          </button>
+          <button
+            id="buttonLCU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="û"
+          >
+            û
+          </button>
+          <button
+            id="buttonLTU"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ü"
+          >
+            ü
+          </button>
+        </p>
+        <p class="subsequentRow">Consonants, uppercase</p>
+        <p>
+          <button
+            id="buttonUCC"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Č"
+          >
+            Č
+          </button>
+          <button
+            id="buttonUTC"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ç"
+          >
+            Ç
+          </button>
+          <button
+            id="buttonUD"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḍ"
+          >
+            Ḍ
+          </button>
+          <button
+            id="buttonULD"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḏ"
+          >
+            Ḏ
+          </button>
+          <button
+            id="buttonUDG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ġ"
+          >
+            Ġ
+          </button>
+          <button
+            id="buttonULG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḡ"
+          >
+            Ḡ
+          </button>
+          <button
+            id="buttonUCG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ǧ"
+          >
+            Ǧ
+          </button>
+          <button
+            id="buttonUTG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ğ"
+          >
+            Ğ
+          </button>
+          <button
+            id="buttonUH"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḥ"
+          >
+            Ḥ
+          </button>
+          <button
+            id="buttonUBH"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḫ"
+          >
+            Ḫ
+          </button>
+          <button
+            id="buttonUK"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ḳ"
+          >
+            Ḳ
+          </button>
+          <button
+            id="buttonUDS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ṡ"
+          >
+            Ṡ
+          </button>
+          <button
+            id="buttonUS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ṣ"
+          >
+            Ṣ
+          </button>
+          <button
+            id="buttonUCS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Š"
+          >
+            Š
+          </button>
+          <button
+            id="buttonUTS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ş"
+          >
+            Ş
+          </button>
+          <button
+            id="buttonULT"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ṯ"
+          >
+            Ṯ
+          </button>
+          <button
+            id="buttonUT"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ṭ"
+          >
+            Ṭ
+          </button>
+          <button
+            id="buttonUZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ẓ"
+          >
+            Ẓ
+          </button>
+          <button
+            id="buttonUDZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ż"
+          >
+            Ż
+          </button>
+          <button
+            id="buttonULZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="Ẕ"
+          >
+            Ẕ
+          </button>
+        </p>
+        <p class="subsequentRow">Consonants, lowercase</p>
+        <p>
+          <button
+            id="buttonLCC"
+            type="button"
+            class="btn btn-outline-primary"
+            value="č"
+          >
+            č
+          </button>
+          <button
+            id="buttonLTC"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ç"
+          >
+            ç
+          </button>
+          <button
+            id="buttonLD"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḍ"
+          >
+            ḍ
+          </button>
+          <button
+            id="buttonLLD"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḏ"
+          >
+            ḏ
+          </button>
+          <button
+            id="buttonLDG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ġ"
+          >
+            ġ
+          </button>
+          <button
+            id="buttonLLG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḡ"
+          >
+            ḡ
+          </button>
+          <button
+            id="buttonLCG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ǧ"
+          >
+            ǧ
+          </button>
+          <button
+            id="buttonLTG"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ğ"
+          >
+            ğ
+          </button>
+          <button
+            id="buttonLH"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḥ"
+          >
+            ḥ
+          </button>
+          <button
+            id="buttonLBH"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḫ"
+          >
+            ḫ
+          </button>
+          <button
+            id="buttonLK"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ḳ"
+          >
+            ḳ
+          </button>
+          <button
+            id="buttonLN"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ñ"
+          >
+            ñ
+          </button>
+          <button
+            id="buttonLDS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ṡ"
+          >
+            ṡ
+          </button>
+          <button
+            id="buttonLS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ṣ"
+          >
+            ṣ
+          </button>
+          <button
+            id="buttonLCS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="š"
+          >
+            š
+          </button>
+          <button
+            id="buttonLTS"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ş"
+          >
+            ş
+          </button>
+          <button
+            id="buttonLLT"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ṯ"
+          >
+            ṯ
+          </button>
+          <button
+            id="buttonLT"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ṭ"
+          >
+            ṭ
+          </button>
+          <button
+            id="buttonLZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ẓ"
+          >
+            ẓ
+          </button>
+          <button
+            id="buttonLDZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ż"
+          >
+            ż
+          </button>
+          <button
+            id="buttonLLZ"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ẕ"
+          >
+            ẕ
+          </button>
+        </p>
+        <p class="subsequentRow"><em>Hamzah</em> and <em>‘ayn</em></p>
+        <p>
+          <button
+            id="buttonHamzah"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ʾ"
+          >
+            ʾ
+          </button>
+          <button
+            id="buttonAyn"
+            type="button"
+            class="btn btn-outline-primary"
+            value="ʿ"
+          >
+            ʿ
+          </button>
+        </p>
+      </div>
+    </div>
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+      const charDisplay = document.getElementById("charInput");
+      function copyChar() {
+        if (charDisplay.value.length > 0) {
+          const success = "Copied: " + charDisplay.value;
+          charDisplay.select();
+          charDisplay.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+          document.getSelection().removeAllRanges();
+          document.getElementById("charInput").blur();
+          $("#copyButton").tooltip("enable");
+          $("#copyButton").attr("data-original-title", success).tooltip("show");
+          $("#copyButton").tooltip("disable");
+        }
+      }
+      $("#buttonsGalore").on("click", ".btn", function () {
+        const selectedChar = $(this).val();
+        charDisplay.value = selectedChar;
+      });
+      $("#copyButton").on("click", copyChar);
+    </script>
+  </body>
+</html>
