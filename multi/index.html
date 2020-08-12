@@ -24,7 +24,7 @@
         max-width: 1024px;
       }
       .firstRow {
-        margin-top: 1.3rem;
+        margin-top: 0.3rem;
         margin-bottom: 0.6rem;
       }
       .subsequentRow {
@@ -49,7 +49,7 @@
     <title>Character picker of last resort</title>
   </head>
   <body>
-    <div class="container" style="margin-top: 1rem;">
+    <div class="container" style="margin-top: 0.6rem;">
       <h2>Character picker of last resort</h2>
       <p>
         <em
@@ -61,7 +61,10 @@
       <form action="JavaScript:copyChar();">
         <label for="charInput">Selected character(s):</label>
         <div class="form-row">
-          <div class="col-auto" style="width: 18em;">
+          <div
+            class="col-auto"
+            style="width: 18em; margin-right: 0.3em; margin-bottom: 1rem;"
+          >
             <input
               autocapitalize="none"
               autocomplete="off"
@@ -73,12 +76,14 @@
               style="text-align: center;"
             />
           </div>
-          <div class="col-auto">
+          <div
+            class="col-auto"
+            style="margin-right: 0.3em; margin-bottom: 1rem;"
+          >
             <button
               id="copyButton"
               type="button"
               class="btn btn-primary"
-              style="width: auto; margin-left: 0.3rem;"
               data-toggle="tooltip"
               data-delay='{"hide":"1000"}'
               title=""
@@ -86,23 +91,13 @@
               Copy
             </button>
           </div>
-          <div class="col-auto">
-            <button
-              id="backspaceButton"
-              type="button"
-              class="btn btn-info"
-              style="width: auto; margin-left: 0.3rem;"
-            >
+          <div class="col-auto" style="margin-right: 0.3em;">
+            <button id="backspaceButton" type="button" class="btn btn-info">
               ⌫
             </button>
           </div>
           <div class="col-auto">
-            <button
-              id="clearButton"
-              type="button"
-              class="btn btn-secondary"
-              style="width: auto; margin-left: 0.3rem;"
-            >
+            <button id="clearButton" type="button" class="btn btn-secondary">
               Clear
             </button>
           </div>
