@@ -53,18 +53,20 @@
       <h2>Character picker of last resort</h2>
       <p>
         <em
-          >Click a character to select it, then copy it to the clipboard.<br />(There
-          is a more <a href="../">streamlined version</a>, which should work in
-          most modern browsers.)</em
+          >Click and/or type characters to append them to the text box, then
+          copy the result to the clipboard.<br />(There is a
+          <a href="../">simpler version</a>, for picking single characters.)</em
         >
       </p>
-      <form>
-        <label for="charInput">Selected character:</label>
+      <form action="JavaScript:copyChar();">
+        <label for="charInput">Selected character(s):</label>
         <div class="form-row">
-          <div class="col-auto" style="width: 3.4rem;">
+          <div class="col-auto" style="width: 18em;">
             <input
-              readonly="readonly"
+              autocapitalize="none"
               autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
               type="text"
               class="form-control"
               id="charInput"
@@ -82,6 +84,26 @@
               title=""
             >
               Copy
+            </button>
+          </div>
+          <div class="col-auto">
+            <button
+              id="backspaceButton"
+              type="button"
+              class="btn btn-info"
+              style="width: auto; margin-left: 0.3rem;"
+            >
+              ⌫
+            </button>
+          </div>
+          <div class="col-auto">
+            <button
+              id="clearButton"
+              type="button"
+              class="btn btn-secondary"
+              style="width: auto; margin-left: 0.3rem;"
+            >
+              Clear
             </button>
           </div>
         </div>
@@ -684,9 +706,21 @@
       }
       $("#buttonsGalore").on("click", ".btn", function () {
         const selectedChar = $(this).val();
-        charDisplay.value = selectedChar;
+        charDisplay.value += selectedChar;
+        document.getElementById("charInput").focus();
       });
       $("#copyButton").on("click", copyChar);
+      $("#backspaceButton").on("click", function () {
+        if (charDisplay.value.length > 0) {
+          charDisplay.value = charDisplay.value.slice(0, -1);
+        }
+        if (charDisplay.value.length > 0) {
+          document.getElementById("charInput").focus();
+        }
+      });
+      $("#clearButton").on("click", function () {
+        charDisplay.value = "";
+      });
     </script>
   </body>
 </html>
