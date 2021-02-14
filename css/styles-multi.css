@@ -1,0 +1,44 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+.container {
+  margin-top: 0.6rem;
+  max-width: 1024px;
+}
+.firstRow {
+  margin-bottom: 0.6rem;
+  margin-top: 0.3rem;
+}
+.subsequentRow {
+  margin-bottom: 0.6rem;
+  margin-top: -0.8rem;
+}
+.tooltip {
+  font-family: "Noto Sans", sans-serif;
+}
+#backspace-div {
+  margin-right: 0.3em;
+}
+#buttonAyn,
+#buttonHamzah {
+  font-family: "Gentium Basic", serif;
+  font-size: 140%;
+}
+#buttonsGalore button {
+  height: 2.4rem;
+  margin-bottom: 0.9rem;
+  margin-right: 0.6rem;
+  width: 2.4rem;
+}
+#charInput {
+  text-align: center;
+}
+#copy-div {
+  margin-bottom: 1rem;
+  margin-right: 0.3em;
+}
+#input-div {
+  margin-bottom: 1rem;
+  margin-right: 0.3em;
+  width: 18em;
+}

@@ -8,7 +8,7 @@
     />
     <meta
       name="description"
-      content="Copy special characters for romanization of Arabic-script languages."
+      content="Copy special characters for romanization of Arabic-script languages"
     />
     <link rel="icon" href="#" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
@@ -16,40 +16,11 @@
       href="https://fonts.googleapis.com/css?family=Gentium+Basic|Noto+Sans:400,400i&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Noto Sans", sans-serif;
-      }
-      .container {
-        max-width: 1024px;
-      }
-      .firstRow {
-        margin-top: 0.3rem;
-        margin-bottom: 0.6rem;
-      }
-      .subsequentRow {
-        margin-top: -0.8rem;
-        margin-bottom: 0.6rem;
-      }
-      .tooltip {
-        font-family: "Noto Sans", sans-serif;
-      }
-      #buttonsGalore button {
-        margin-right: 0.6rem;
-        margin-bottom: 0.9rem;
-        width: 2.4rem;
-        height: 2.4rem;
-      }
-      #buttonAyn,
-      #buttonHamzah {
-        font-family: "Gentium Basic", serif;
-        font-size: 140%;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/styles-multi.css" />
     <title>Character picker of last resort</title>
   </head>
   <body>
-    <div class="container" style="margin-top: 0.6rem">
+    <div class="container">
       <h2>Character picker of last resort</h2>
       <p>
         <em
@@ -58,13 +29,10 @@
           <a href="../">simpler version</a>, for picking single characters.)</em
         >
       </p>
-      <form action="JavaScript:copyChar();">
+      <form>
         <label for="charInput">Selected character(s):</label>
         <div class="form-row">
-          <div
-            class="col-auto"
-            style="width: 18em; margin-right: 0.3em; margin-bottom: 1rem"
-          >
+          <div class="col-auto" id="input-div">
             <input
               autocapitalize="none"
               autocomplete="off"
@@ -73,13 +41,9 @@
               type="text"
               class="form-control"
               id="charInput"
-              style="text-align: center"
             />
           </div>
-          <div
-            class="col-auto"
-            style="margin-right: 0.3em; margin-bottom: 1rem"
-          >
+          <div class="col-auto" id="copy-div">
             <button
               id="copyButton"
               type="button"
@@ -91,7 +55,7 @@
               Copy
             </button>
           </div>
-          <div class="col-auto" style="margin-right: 0.3em">
+          <div class="col-auto" id="backspace-div">
             <button id="backspaceButton" type="button" class="btn btn-info">
               ⌫
             </button>
@@ -700,38 +664,6 @@
     <script src="../js/jquery-3.5.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script>
-      const charDisplay = document.getElementById("charInput");
-      function copyChar() {
-        if (charDisplay.value.length > 0) {
-          const success = "Copied: " + charDisplay.value;
-          charDisplay.select();
-          charDisplay.setSelectionRange(0, 99999);
-          document.execCommand("copy");
-          document.getSelection().removeAllRanges();
-          document.getElementById("charInput").blur();
-          $("#copyButton").tooltip("enable");
-          $("#copyButton").attr("data-original-title", success).tooltip("show");
-          $("#copyButton").tooltip("disable");
-        }
-      }
-      $("#buttonsGalore").on("click", ".btn", function () {
-        const selectedChar = $(this).val();
-        charDisplay.value += selectedChar;
-        document.getElementById("charInput").focus();
-      });
-      $("#copyButton").on("click", copyChar);
-      $("#backspaceButton").on("click", function () {
-        if (charDisplay.value.length > 0) {
-          charDisplay.value = charDisplay.value.slice(0, -1);
-        }
-        if (charDisplay.value.length > 0) {
-          document.getElementById("charInput").focus();
-        }
-      });
-      $("#clearButton").on("click", function () {
-        charDisplay.value = "";
-      });
-    </script>
+    <script src="../js/charpick-multi.js"></script>
   </body>
 </html>
