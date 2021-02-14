@@ -1,0 +1,28 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+button {
+  margin-right: 0.6rem;
+  margin-bottom: 0.9rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.container {
+  margin-top: 0.6rem;
+  max-width: 1024px;
+}
+.firstRow {
+  margin-bottom: 0.6rem;
+}
+.tooltip {
+  font-family: "Noto Sans", sans-serif;
+}
+.subsequentRow {
+  margin-top: -0.8rem;
+  margin-bottom: 0.6rem;
+}
+#buttonAyn,
+#buttonHamzah {
+  font-family: "Gentium Basic", serif;
+  font-size: 140%;
+}
